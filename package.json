@@ -1,0 +1,50 @@
+{
+  "name": "telegraph-image-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Telegraph-Image hosting — upload images to img.gwozai.email or your own instance",
+  "type": "module",
+  "license": "MIT",
+  "author": "gwozai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwozai/telegraph-image-mcp.git"
+  },
+  "homepage": "https://github.com/gwozai/telegraph-image-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/gwozai/telegraph-image-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "telegraph-image",
+    "image-hosting",
+    "cursor",
+    "claude",
+    "model-context-protocol"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "telegraph-image-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
