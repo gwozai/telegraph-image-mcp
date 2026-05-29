@@ -93,6 +93,39 @@ Content-Type: multipart/form-data
 
 完整访问地址：`{BASE_URL}/file/xxx.png`
 
+## 常见问题
+
+### `npx telegraph-image-mcp` 启动报 `ERR_MODULE_NOT_FOUND` / `completable.js`
+
+通常是 **npx 缓存损坏**，不是包本身坏了。清理后重试：
+
+```bash
+rm -rf ~/.npm/_npx/*telegraph-image-mcp* ~/.npm/_npx/30e5450094f75aac
+npx -y telegraph-image-mcp@0.1.1
+```
+
+或在 Cursor 里 **Settings → MCP → telegraph-image → Restart**。
+
+详见 [CHANGELOG.md](CHANGELOG.md)。
+
+### MCP 面板不显示 telegraph-image
+
+1. 检查 `~/.cursor/mcp.json` JSON 格式
+2. 确认本机已安装 Node.js ≥ 18：`node -v`
+3. 重载 Cursor 窗口
+
+### 平台支持
+
+| 系统 | 支持 | 说明 |
+|------|------|------|
+| macOS | ✅ | 已实测 |
+| Windows | ✅ | 路径用 `C:\...` 或 `C:/...` |
+| Linux / CentOS | ✅ | 需 Node.js ≥ 18 |
+
+## 版本记录
+
+见 [CHANGELOG.md](CHANGELOG.md)。当前推荐：`telegraph-image-mcp@0.1.1`。
+
 ## 本地开发
 
 ```bash

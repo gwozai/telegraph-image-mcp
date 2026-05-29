@@ -1,6 +1,6 @@
 {
   "name": "telegraph-image-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for Telegraph-Image hosting — upload images to img.gwozai.email or your own instance",
   "type": "module",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@modelcontextprotocol/sdk": "1.29.0",
     "zod": "^3.24.0"
   },
   "devDependencies": {
